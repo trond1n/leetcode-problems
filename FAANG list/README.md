@@ -1,4 +1,4 @@
-Q1: Binary Tree Level Order Traversal - (LeetCode 102)
+~~Q1: Binary Tree Level Order Traversal - (LeetCode 102)~~
 Q2: Average of Levels in Binary Tree - (LeetCode 637)
 Q3: Level Order Successor of a Node - Google
 Q4: Binary Tree Zigzag Level Order Traversal - (LeetCode 103)
