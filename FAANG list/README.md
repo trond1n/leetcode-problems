@@ -2,7 +2,7 @@
 ~~Q2: Average of Levels in Binary Tree - (LeetCode 637)~~
 ~~Q3: Level Order Successor of a Node - Google~~
 ~~Q4: Binary Tree Zigzag Level Order Traversal - (LeetCode 103)~~
-Q5: Binary Tree Level Order Traversal II - (LeetCode 107)
+~~Q5: Binary Tree Level Order Traversal II - (LeetCode 107)~~
 Q6: Populating Next Right Pointers in Each Node - (LeetCode 116) - Amazon, London
 Q7: Binary Tree Right Side View - (LeetCode 199) - Amazon, Flipkart
 Q8: Cousins in Binary Tree - (LeetCode 993)
