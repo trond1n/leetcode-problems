@@ -27,29 +27,21 @@ class _Node {
 function connect(root: _Node | null): _Node | null {
     if (!root) return null;
 
-    const queue: _Node[] = [root];
-    let lastNode = queue[queue.length - 1];
-   
-    while (queue.length > 0) {
-        const currentNode = queue.shift()!;
-        let count = 0;
-
-            if (lastNode) {
-                lastNode.next = null;
-            }
-            currentNode.next = queue[0];
-            if (currentNode.left) {
-                count++;
-                queue.push(currentNode.left);
-            }
-            if (currentNode.right) {
-                count++;
-                queue.push(currentNode.right);
-            }
-           if (count === 0) {
-                lastNode = queue[queue.length - 1];
-            }
+    // Если есть левый дочерний узел, установите его next на правый дочерний узел
+    if (root.left) {
+        root.left.next = root.right ? root.right : null;
     }
+
+    // Если есть правый дочерний узел, установите его next на левый дочерний узел следующего узла
+    if (root.right) {
+        root.right.next = root.next ? root.next.left : null;
+    }
+
+    // Рекурсивно вызовите функцию для правого поддерева, так как оно будет обрабатываться после левого
+    connect(root.right);
+
+    // Рекурсивно вызовите функцию для левого поддерева
+    connect(root.left);
 
     return root;
 };
