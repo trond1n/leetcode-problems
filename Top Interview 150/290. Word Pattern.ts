@@ -13,16 +13,18 @@ function wordPattern(pattern: string, s: string): boolean {
     if (pattern.length !== words.length) return false;
     for (let i = 0; i < pattern.length; i++) {
 
-        const patternChar = pattern[i]; //а
-        const word = words[i];//dog
-        if (!hash.has(patternChar)) //а нет в мапе
+        const patternChar = pattern[i]; 
+        const word = words[i];
+        if (!hash.has(patternChar)) 
         {
+            if (Array.from(hash.values()).includes(word)) return false
             hash.set(patternChar, word);
+
         } else {
+
             let hashChar = hash.get(patternChar);
             if (hashChar !== word) return false;
         }
     }
     return true;
 };
-console.log(wordPattern('abba', "dog dog dog dog"));
